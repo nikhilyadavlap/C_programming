@@ -27,6 +27,8 @@ Constraints:
 1 <= nums.length <= 50
 1 <= nums[i] <= 5 */
 
+#include <stdio.h>
+
 int missingInteger(int* nums, int numsSize) {
     
     int sum = nums[0];
@@ -56,4 +58,15 @@ int missingInteger(int* nums, int numsSize) {
             return x;
         x++;
     }
+}
+
+int main() {
+
+    int nums[] = {1, 2, 3, 5, 6};
+    int numSize = sizeof(nums) / sizeof(nums[0]);
+    int result = missingInteger(nums, numSize);
+
+    printf("Answer = %d\n", result);
+
+    return 0;
 }
